@@ -149,7 +149,6 @@ export const friendlyStakingSelector = selectorFamily({
         }
         data.address = jettonAdress;
 
-        // const walletContract = get(stakingWalletContractSelector(jettonAdress.toString()));
         const jettonWallet = new JettonWallet(jettonAdress);
         const walletContract = tonClient.open(jettonWallet) as OpenedContract<JettonWallet>;
         if (!walletContract) return;
@@ -171,15 +170,11 @@ export const friendlyStakingSelector = selectorFamily({
       }
 
       let balance = 0n;
-      // const smcAddress = getAddress(address);
-      // if (!smcAddress) {
-      //   throw 'invalid friendly staking address';
-      // }
-      // try {
-      //   const tonBalance = tonClient.getBalance(smcAddress);
-      // } catch (error) {
-      //   console.error(error);
-      // }
+      try {
+        // balance = await tonClient.getBalance(contractAddress);
+      } catch (error) {
+        console.error('tonClient', error);
+      }
       if (staking && jetton && data) {
         return friendlyStaking(balance, staking, jetton, data);
       }

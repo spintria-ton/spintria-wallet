@@ -26,7 +26,11 @@ export const StakingCards = () => (
           sx={{ alignItems: 'center', gap: 1, justifyContent: 'space-between' }}
         >
           <Stack direction="row" gap={2}>
-            <Avatar size="lg" alt="Staking Jetton" src={`/staking/spintria-${m.fixedApy}.png`}>
+            <Avatar
+              size="lg"
+              alt="Staking Jetton"
+              src={`/${import.meta.env.BASE_URL}/staking/spintria-${m.fixedApy}.png`}
+            >
               {m.fixedApy}
             </Avatar>
             <Box>

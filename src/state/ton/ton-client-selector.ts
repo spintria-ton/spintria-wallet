@@ -4,7 +4,7 @@ import { CHAIN } from '@tonconnect/ui-react';
 import { selector } from 'recoil';
 import { tonNetworkTypeAtom } from './ton-network-type-atom';
 
-const getTonClient = async (network: Network) =>
+export const getTonClient = async (network: Network) =>
   new TonClient({ endpoint: await getHttpEndpoint({ network }) });
 
 export const tonClientSelector = selector({
