@@ -1,0 +1,108 @@
+{
+  "en": {
+    "translation": {
+      "company": "Spintria",
+      "footer-company": "Spintria",
+      "wallet": {
+        "staking": "Staking",
+        "vesting": "Vesting",
+        "get-apy": "Get up from 18% APY on SP",
+        "with-spintria": "with Spintria staking",
+        "jetton": "jetton",
+        "check-vesting": "Check up your vesting lockups",
+        "open": "Open"
+      },
+      "staking": {
+        "title": "Staking Manager",
+        "title2": "Staking wallet earn",
+        "subtitle1": "Manage wallets with",
+        "subtitle2": "locked for some time.",
+        "subtitle3": "Earn APY on your SP",
+        "enter-address": "Staking contract address",
+        "pick-contract": "Pick staking contract",
+        "search": "Search",
+        "edit": "Edit",
+        "address": "Address",
+        "do-not-transfer": "Do not transfer TONs or Jettons to this address",
+        "incorrect-contract": "It looks like this is not a staking contract",
+        "incorrect-address": "Incorrect address",
+        "card": {
+          "title": "Pick your",
+          "params": "Staking params",
+          "you-deposited": "You deposited",
+          "tvl": "TVL",
+          "tvl-info": "Тotal value locked represents the number of assets that are currently being staked in a specific protocol",
+          "available-for-claim": "You rewards available for claim",
+          "you-have-earned": "You have earned",
+          "button-stake": "Stake",
+          "button-claim": "Claim rewards & withdraw"
+        },
+        "form": {
+          "title": "Stake",
+          "title-earn": "Claim rewards & withdraw",
+          "topup": "TopUp",
+          "description": "Fill in the information of the staking form",
+          "earn-description": "Fill in the information of the withdraw form",
+          "topup-description": "Fill in the information of the topup form",
+          "amount": "Amount",
+          "balance": "Bal",
+          "stake": "Stake",
+          "button-max": "Max",
+          "apy": "APY",
+          "apy-info": "Annual Percentage Yield",
+          "est-earning": "Est.earning",
+          "staking-lockup": "Staking lockup (in days)",
+          "min-stake": "Min.stake",
+          "max-stake": "Max.stake",
+          "max-total": "Max.total",
+          "helper": "Each top up reset lockup period",
+          "button-stake": "Send",
+          "button-withdraw": "Withdraw"
+        }
+      },
+      "vesting": {
+        "title": "Vesting Manager",
+        "subtitle1": "Manage wallets with",
+        "subtitle2": "locked for some time.",
+        "enter-address": "Vesting contract address",
+        "pick-contract": "Pick vesting contract",
+        "search": "Search",
+        "edit": "Edit",
+        "address": "Address",
+        "do-not-transfer": "Do not transfer TONs or Jettons to this address except:",
+        "incorrect-contract": "It looks like this is not a vesting contract",
+        "incorrect-address": "Incorrect address",
+        "startTime": "Vesting start time",
+        "cliffDisabled": "disabled",
+        "cliffDuration": "Cliff duration",
+        "contractFinished": "contract finished",
+        "nextPeriod": "Next period",
+        "totalDuration": "Total duration",
+        "unlockPeriod": "Unlock period"
+      },
+      "jetton": {
+        "totalSupply": "Total supply",
+        "name": "Jetton name",
+        "symbol": "Symbol",
+        "description": "Description",
+        "decimals": "decimals",
+        "no-wallet": "no wallet",
+        "wallet-connect-info": "To continue, you need to connect your wallet. To do this, click the “Connect wallet” button in the upper right corner. After that, select one of the connection methods; we recommend using Tonkeeper.",
+        "balance": "Balance",
+        "vesting-balance": "Vesting jetton balance",
+        "staking-balance": "Staking jetton balance"
+      },
+      "language": {
+        "title": "Language",
+        "list": {
+          "en": "English",
+          "ru": "Русский"
+        },
+        "short": {
+          "en": "En",
+          "ru": "Ru"
+        }
+      }
+    }
+  }
+}
