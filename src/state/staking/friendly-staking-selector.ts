@@ -55,7 +55,7 @@ const friendlyStaking = async (
   if (content?.uri) {
     let uriToFetch = content.uri;
     const foundedUri = OFFCHAIN_URIS.find((f) => content?.uri?.indexOf(f) !== -1);
-    if (foundedUri) {
+    if (import.meta.env.DEV && foundedUri) {
       uriToFetch = foundedUri;
     }
     try {
