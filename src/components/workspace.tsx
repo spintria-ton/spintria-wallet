@@ -26,8 +26,8 @@ export const Workspace = () => {
   return (
     <CssVarsProvider
       theme={theme}
-      defaultMode="system"
-      modeStorageKey={'spintria-theme-mode'}
+      defaultMode="light"
+      modeStorageKey={'spintria-wallet-theme-mode'}
       disableTransitionOnChange
     >
       <CssBaseline />

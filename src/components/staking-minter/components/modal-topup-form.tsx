@@ -29,8 +29,8 @@ export const ModalTopUpForm = ({ open, setOpen }: Props) => {
       <ModalDialog
         sx={(theme) => ({
           [theme.breakpoints.only('xs')]: {
-            top: 'unset',
-            bottom: 0,
+            top: 0,
+            bottom: 'unset',
             left: 0,
             right: 0,
             borderRadius: 0,
