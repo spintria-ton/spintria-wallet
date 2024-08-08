@@ -1,7 +1,7 @@
 {
   "name": "spintria-wallet",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "homepage": "https://spintria-ton.github.io/spintria-wallet",
   "scripts": {
