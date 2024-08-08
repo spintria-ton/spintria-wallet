@@ -1,18 +1,20 @@
 import { Address, toNano } from '@ton/core';
 import { useState } from 'react';
 import { useParams } from 'react-router';
+import { useResetRecoilState } from 'recoil';
 import { DEFAULT_DECIMAL_PLACES } from '../constants';
 import { JettonWallet } from '../contracts/JettonWallet';
 import { tonClientSelector } from '../state';
-import { FriendlyStaking } from '../state/staking';
+import { FriendlyStaking, friendlyStakingSelector } from '../state/staking';
 import { toUnits } from '../state/staking/units';
 import { RouteParams } from '../types';
-import { waitForSeqno } from '../utils';
+import { delay, waitForSeqno } from '../utils';
 import { useLoadable } from './useLoadable';
 import { useTonConnect } from './useTonConnect';
 
 export function useWithdrawStake(data?: FriendlyStaking) {
   const { address } = useParams<RouteParams>();
+  const resetStakingData = useResetRecoilState(friendlyStakingSelector({ address }));
   const [amount, setAmount] = useState('');
   const { sender, wallet } = useTonConnect();
   const [sendingTx, setSendingTx] = useState(false);
@@ -53,8 +55,10 @@ export function useWithdrawStake(data?: FriendlyStaking) {
 
       try {
         await waiter();
+        await delay(10 * 1000);
       } catch (error) {}
 
+      resetStakingData();
       setSendingTx(false);
       setCloseForm(true);
     },

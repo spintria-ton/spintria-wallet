@@ -7,4 +7,7 @@ export default defineConfig({
   plugins: [react(), nodePolyfills()],
   // base: ((process.env.GITHUB_REPOSITORY ?? "") + "/").match(/(\/.*)/)?.[1],
   base: '/spintria-wallet/',
+  define: {
+    APP_VERSION: JSON.stringify(process.env.npm_package_version),
+  },
 });

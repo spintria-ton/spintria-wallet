@@ -21,7 +21,7 @@ export const MainFooter = () => {
       }}
     >
       <Typography level="body-xs" textAlign="center">
-        © {t('footer-company')} {new Date().getFullYear()}
+        © {t('footer-company')} {new Date().getFullYear()} – v.{APP_VERSION}
       </Typography>
       <Stack gap={2} direction="row" alignItems="center" justifyContent="flex-end">
         <ColorSchemeToggle />

@@ -15,6 +15,7 @@ const palette = {
 };
 
 const theme = extendTheme({
+  zIndex: { modal: 950 },
   colorSchemes: {
     light: { palette },
     dark: { palette },
