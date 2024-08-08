@@ -8,13 +8,16 @@ import { getAddress } from '../utils';
 
 export function useStakingWallet() {
   const { address } = useParams<RouteParams>();
+
   const wallet = useRecoilValue(tonconnectWalletAddressAtom);
   const [data, setData] = useState<FriendlyStaking>();
   const [isAdmin, setIsAdmin] = useState(false);
   const { state, contents } = useRecoilValueLoadable(friendlyStakingSelector({ address }));
 
   useEffect(() => {
-    if (state === 'hasValue' && contents) {
+    if (state === 'hasError' || state === 'loading') {
+      setData(undefined);
+    } else if (state === 'hasValue' && contents) {
       setData(contents);
       if (wallet && contents.jetton?.adminAddress) {
         const wa = getAddress(wallet);

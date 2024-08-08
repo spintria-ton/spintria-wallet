@@ -1,5 +1,6 @@
 import { Address, OpenedContract } from '@ton/core';
-import { atom, DefaultValue, selectorFamily } from 'recoil';
+import { DefaultValue, selectorFamily } from 'recoil';
+import { resetableDependencyVersion } from '../resetable-dependency';
 import { tonClientSelector } from '../ton';
 import { tonconnectWalletAddressAtom } from '../wallet';
 import defaultRawJson from './staking-jetton-meta-data.json';
@@ -189,9 +190,4 @@ export const friendlyStakingSelector = selectorFamily({
         set(resetableDependencyVersion, (v) => v + 1);
       }
     },
-});
-
-export const resetableDependencyVersion = atom({
-  key: 'resetableDependencyVersion',
-  default: 0,
 });

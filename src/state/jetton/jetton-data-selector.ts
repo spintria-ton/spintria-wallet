@@ -1,5 +1,6 @@
 import { fromNano } from '@ton/core';
 import { selector } from 'recoil';
+import { resetableDependencyVersion } from '../resetable-dependency';
 import { tonconnectWalletAddressAtom } from '../wallet';
 import { jettonMinterContractSelector } from './jetton-minter-contract-selector';
 import { jettonWalletContractSelector } from './jetton-wallet-contract-selector';
@@ -19,6 +20,9 @@ export type JettonDataAtom = {
 export const jettonDataSelector = selector({
   key: 'jettonDataSelector',
   get: async ({ get }) => {
+    // 'register' as a resetable dependency
+    get(resetableDependencyVersion);
+
     const openedContract = get(jettonMinterContractSelector);
     let balance: bigint | undefined;
     let jettonWalletAddress: string | undefined;
