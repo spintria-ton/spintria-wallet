@@ -29,7 +29,7 @@ export const StakingCards = () => (
             <Avatar
               size="lg"
               alt="Staking Jetton"
-              src={`/${import.meta.env.BASE_URL}/staking/spintria-${m.fixedApy}.png`}
+              src={`${import.meta.env.BASE_URL}spintria-orig.png`}
             >
               {m.fixedApy}
             </Avatar>
