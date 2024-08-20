@@ -2,6 +2,6 @@
   "name": "Spintria Test Staking Jetton 15%",
   "symbol": "stSP15test",
   "decimals": "8",
-  "image": "https://spintria-ton.github.io/spintria-wallet/staking-test/jetton.png",
+  "image": "https://wallet.sp.one/staking-test/jetton.png",
   "description": "SP.one"
 }
